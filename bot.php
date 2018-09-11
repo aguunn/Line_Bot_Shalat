@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'erXILpWOjXlG6xqtS9XY1paLwGUNKmqBEPHGveVrYi+E81mbL3lnl4WeUbed5b0wg9LhYAwMi6MuHg+w/XVymXB4saqhcsat6Np0eKbjWYkNDcXvSySxqiD7JVX2kcpT7x8L4d6oXOgOsttla5Q+GAdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '39b7a04bd8c79bb109997c52c699b71a';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -37,7 +37,7 @@ if (count($pesan_datang) > 2) {
 }
 
 #-------------------------[Function]-------------------------#
-function shalat($keyword) {
+function sholat($keyword) {
     $uri = "https://time.siswadi.com/pray/" . $keyword;
 
     $response = Unirest\Request::get("$uri");
@@ -56,7 +56,7 @@ function shalat($keyword) {
 	$result .= "\nMaghrib : ";
 	$result .= $json['data']['Maghrib'];
 	$result .= "\nIsya : ";
-	$result .= $json['data']['Isha'];
+	$result .= $json['data']['Isha'];w
     return $result;
 }
 #-------------------------[Function]-------------------------#
@@ -70,6 +70,7 @@ function shalat($keyword) {
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
     $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+    $text = "Created By 'αguunあ
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
